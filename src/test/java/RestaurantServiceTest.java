@@ -73,4 +73,10 @@ class RestaurantServiceTest {
         assertEquals(400, service.getOrderTotal(selectedItems));
     }
 
+    @Test
+    public void getOrderTotal_should_return_zero_if_no_selected_item(){
+        List<Item> selectedItems = new ArrayList<>();
+        assertEquals(0, service.getOrderTotal(selectedItems));
+    }
+
 }
